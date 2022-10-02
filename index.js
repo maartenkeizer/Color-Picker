@@ -5,7 +5,7 @@ const colorContainer = document.getElementById("color-container")
 const rangeSlider = document.getElementById("range-slider")
 
 function updateTextInput() {
-    document.getElementById('textOutput').value = rangeSlider.value; 
+    document.getElementById('textOutput').value = rangeSlider.value
 }
 
 submitForm.addEventListener("submit", function(event){
@@ -21,14 +21,13 @@ submitForm.addEventListener("submit", function(event){
             data.colors.map(color => {
                 colorHtml += 
                     `<div class="color-wrapper">
-                        <div class="color-div" style="background-color: ${color.hex.value};"></div>
+                        <div class="color-div" style="background-color: ${color.hex.value}"></div>
                         <div class="color-hex"><p>${color.hex.value}</p></div>
                     </div>
                     ` 
-            }).join("");
+            }).join("")
         colorContainer.innerHTML = colorHtml
     })
-console.log(seedColor)
 })
 
 
